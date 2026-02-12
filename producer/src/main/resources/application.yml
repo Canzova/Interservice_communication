@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: producer
+
+
+server:
+  port: 8081
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone : hhtp://localhost:5671/eureka

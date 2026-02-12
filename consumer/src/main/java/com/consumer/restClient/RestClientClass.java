@@ -1,0 +1,22 @@
+package com.consumer.restClient;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClient;
+
+@Service
+@RequiredArgsConstructor
+public class RestClientClass {
+
+    private final RestClient restClient;
+    private final String PRODUCER_URL = "http://PRODUCER";
+
+    public String getInstance() {
+        return restClient.get()
+                .uri("/instance-info")
+                .retrieve()
+                .body(String.class);
+
+    }
+
+}
