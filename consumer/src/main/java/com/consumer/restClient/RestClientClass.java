@@ -9,7 +9,6 @@ import org.springframework.web.client.RestClient;
 public class RestClientClass {
 
     private final RestClient restClient;
-    private final String PRODUCER_URL = "http://PRODUCER";
 
     public String getInstance() {
         return restClient.get()

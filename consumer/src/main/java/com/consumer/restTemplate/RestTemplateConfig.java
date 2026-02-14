@@ -11,9 +11,5 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class RestTemplateConfig {
 
-    @Bean
-    @LoadBalanced
-    public RestClient restClient(){
-        return RestClient.builder().baseUrl("http://producer").build();
-    }
+
 }

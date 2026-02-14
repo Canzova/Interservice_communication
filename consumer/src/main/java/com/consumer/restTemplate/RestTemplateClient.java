@@ -10,11 +10,11 @@ public class RestTemplateClient {
 
     private final RestClient restClient;
 //    private final String PRODUCER_URL = "http://localhost:8081";
-    private final String PRODUCER_URL = "http://producer";
+//    private final String PRODUCER_URL = "http://producer";
 
     public String getInstance(String subdomainUrl){
         return restClient.get()
-                .uri(PRODUCER_URL + subdomainUrl)
+                .uri(subdomainUrl)
                 .retrieve()
                 .body(String.class);
     }

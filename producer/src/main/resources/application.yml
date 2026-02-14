@@ -10,4 +10,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      default-zone : hhtp://localhost:5671/eureka
+      defaultZone : http://localhost:8761/eureka
